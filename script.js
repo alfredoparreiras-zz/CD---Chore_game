@@ -42,23 +42,20 @@ const randomDoorGenerator = () => {
     } else { 
         return 'Something gone Wrong'
     };
-
-
-}
+};
 
 randomDoorGenerator(); 
 
-
 // Functions to open the doors. 
 doorImage1.onclick = () => { 
-    doorImage1.src = botDoorPath;
+    doorImage1.src = openDoor1;
 };
 
 doorImage2.onclick = () => { 
-    doorImage2.src = beachDoorPath;
+    doorImage2.src = openDoor2;
 };
 
 doorImage3.onclick = () => { 
-    doorImage3.src = spaceDoorPath;
+    doorImage3.src = openDoor3;
 };
 
