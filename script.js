@@ -108,17 +108,27 @@ doorImage3.onclick = () => {
 };
 
 
-startButton.onclick = () => { 
-    startRound()
-}
-
 
 // Reset Function 
 function startRound() { 
     
-    numClosedDoors = 0; 
+    if(currentlyPlaying === false){
+    numClosedDoors = 3; 
     startButton.innerHTML = 'Good Luck!'
     currentlyPlaying = true; 
+    doorImage1.src = closedDoorPath;
+    doorImage2.src = closedDoorPath;
+    doorImage3.src = closedDoorPath;
+
+    randomDoorGenerator(); 
+    }
+}
+
+// OnClick Event
+
+startButton.onclick = () => { 
+    startRound();
+
 }
 
 // GameOver Function 
@@ -135,4 +145,11 @@ function gameOver(status) {
 
 
 // Calling the Generator Function 
-randomDoorGenerator(); 
+randomDoorGenerator(); // Atention
+
+// OnClick Event
+
+startButton.onclick = () => { 
+    startRound();
+
+}
